@@ -366,77 +366,76 @@
             <li><strong>Fourth row:</strong> Generated results.</li>
             <li><strong>Fifth row:</strong> Appearance conditions.</li>
           </ul>
-          <div class="video-grid" style="
+          <!-- Bowls Stack: 4个视频排成一行 -->
+          <div class="video-row" style="
           display: flex;
-          flex-wrap: wrap;
           gap: 12px;
           justify-content: center;
+          margin-bottom: 20px;
         ">
-          <!-- Video 1 -->
-          <figure style="flex: 1 1 calc(50% - 12px); margin: 0;">
+          <figure style="flex: 1 1 calc(25% - 9px); margin: 0; min-width: 200px;">
             <video controls muted loop style="width: 100%; height: auto;">
               <source src="./static/videos/Sim2Real/task1_episode2_0.mp4" type="video/mp4">
             </video>
             <figcaption class="has-text-centered is-size-7 mt-1">Bowls Stack: Scene 1</figcaption>
           </figure>
       
-          <!-- Video 2 -->
-          <figure style="flex: 1 1 calc(50% - 12px); margin: 0;">
+          <figure style="flex: 1 1 calc(25% - 9px); margin: 0; min-width: 200px;">
             <video controls muted loop style="width: 100%; height: auto;">
               <source src="./static/videos/Sim2Real/task1_episode27_270.mp4" type="video/mp4">
             </video>
             <figcaption class="has-text-centered is-size-7 mt-1">Bowls Stack: Scene 2</figcaption>
           </figure>
       
-          <!-- Video 3 -->
-          <figure style="flex: 1 1 calc(50% - 12px); margin: 0;">
+          <figure style="flex: 1 1 calc(25% - 9px); margin: 0; min-width: 200px;">
             <video controls muted loop style="width: 100%; height: auto;">
               <source src="./static/videos/Sim2Real/task1_episode27_90.mp4" type="video/mp4">
             </video>
             <figcaption class="has-text-centered is-size-7 mt-1">Bowls Stack: Scene 3</figcaption>
           </figure>
       
-          <!-- Video 4 -->
-          <figure style="flex: 1 1 calc(50% - 12px); margin: 0;">
+          <figure style="flex: 1 1 calc(25% - 9px); margin: 0; min-width: 200px;">
             <video controls muted loop style="width: 100%; height: auto;">
               <source src="./static/videos/Sim2Real/task1_episode33_180.mp4" type="video/mp4">
             </video>
             <figcaption class="has-text-centered is-size-7 mt-1">Bowls Stack: Scene 4</figcaption>
           </figure>
+          </div>
 
-          <!-- Video 1 -->
-          <figure style="flex: 1 1 calc(50% - 12px); margin: 0;">
+          <!-- Cup Place: 4个视频排成一行 -->
+          <div class="video-row" style="
+          display: flex;
+          gap: 12px;
+          justify-content: center;
+        ">
+          <figure style="flex: 1 1 calc(25% - 9px); margin: 0; min-width: 200px;">
             <video controls muted loop style="width: 100%; height: auto;">
               <source src="./static/videos/Sim2Real/task2_episode0_90.mp4" type="video/mp4">
             </video>
             <figcaption class="has-text-centered is-size-7 mt-1">Cup Place: Scene 1</figcaption>
           </figure>
      
-          <!-- Video 2 -->
-          <figure style="flex: 1 1 calc(50% - 12px); margin: 0;">
+          <figure style="flex: 1 1 calc(25% - 9px); margin: 0; min-width: 200px;">
             <video controls muted loop style="width: 100%; height: auto;">
               <source src="./static/videos/Sim2Real/task2_episode2_90.mp4" type="video/mp4">
             </video>
             <figcaption class="has-text-centered is-size-7 mt-1">Cup Place: Scene 2</figcaption>
           </figure>
       
-          <!-- Video 3 -->
-          <figure style="flex: 1 1 calc(50% - 12px); margin: 0;">
+          <figure style="flex: 1 1 calc(25% - 9px); margin: 0; min-width: 200px;">
             <video controls muted loop style="width: 100%; height: auto;">
               <source src="./static/videos/Sim2Real/task2_episode3_0.mp4" type="video/mp4">
             </video>
             <figcaption class="has-text-centered is-size-7 mt-1">Cup Place: Scene 3</figcaption>
           </figure>
       
-          <!-- Video 4 -->
-          <figure style="flex: 1 1 calc(50% - 12px); margin: 0;">
+          <figure style="flex: 1 1 calc(25% - 9px); margin: 0; min-width: 200px;">
             <video controls muted loop style="width: 100%; height: auto;">
               <source src="./static/videos/Sim2Real/task2_episode4_0.mp4" type="video/mp4">
             </video>
             <figcaption class="has-text-centered is-size-7 mt-1">Cup Place: Scene 4</figcaption>
           </figure>
-          
-        </div>
+          </div>
 
         <!-- Comparison Section -->
         <h3 class="title is-4">3. Comparison</h3>
@@ -445,14 +444,32 @@
           The video below illustrates qualitative differences in generation or performance across approaches.
         </p>
 
+        <div style="display: flex; gap: 16px; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+          <figure style="flex: 1 1 calc(50% - 8px); margin: 0; min-width: 300px;">
+            <video controls muted loop style="width: 100%; height: auto;">
+              <source src="./static/videos/compare/compare1.mp4" type="video/mp4">
+            </video>
+          </figure>
+          <figure style="flex: 1 1 calc(50% - 8px); margin: 0; min-width: 300px;">
+            <video controls muted loop style="width: 100%; height: auto;">
+              <source src="./static/videos/compare/compare2.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </div>
+        <figcaption class="has-text-centered is-size-7 mt-1" style="margin-top: 8px;">Visual comparison of different methods.</figcaption>
+
+        <h4 class="title is-5" style="margin-top: 2rem;">Flexible Object Generation Results</h4>
+        <p>
+          We demonstrate the effectiveness of our method on flexible object manipulation tasks. 
+          The video below shows comparison results between policies trained with and without synthetic data augmentation, 
+          highlighting the significant improvements achieved through our geometry-consistent video generation framework.
+        </p>
+
         <figure style="margin: 0;">
-          <video controls muted loop style="width: 80%; height: auto;">
-            <source src="./static/videos/compare/compare1.mp4" type="video/mp4">
+          <video controls muted loop style="width: 100%; height: auto;">
+            <source src="./static/videos/realrobot/combined_video.mp4" type="video/mp4">
           </video>
-          <video controls muted loop style="width: 80%; height: auto;">
-            <source src="./static/videos/compare/compare2.mp4" type="video/mp4">
-          </video>
-           <figcaption class="has-text-centered is-size-7 mt-1">Visual comparison of different methods.</figcaption>
+          <figcaption class="has-text-centered is-size-7 mt-1">Comparison of flexible object generation results: Policy w/o Synthetic Data (left) vs. Policy w Synthetic Data (right).</figcaption>
         </figure>
 
         </div>
@@ -488,6 +505,7 @@
     </div>
   </div>
 </section>
+
 
 <section class="section" id="BibTeX">
   <div class="container-custom content">
